@@ -1,0 +1,10 @@
+<html>
+<body>
+
+{% for news in news_timeline %}
+<a href = "{{ news["news_link"] }}">{{ news["news_name"] }}</a>
+{% end %}
+{% module Paginator(page, page_size, results_count) %}
+
+</body>
+</html>
