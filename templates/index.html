@@ -1,10 +1,58 @@
 <html>
 <body>
 
+<div class="container">
+     <header class="topbar cf">
+     <h1 class="brand">
+     <a href="http://next.36kr.com/" class="logo" id="logo">NEXT</a>
+     <span class="slogan">不错过任何一个新产品</span>
+     </h1>
+     </header>
+
+<div class="content row ">
+
+<section class="post">
+     <ul>
+         <div class="product-url">
+         <span class="post-tagline">9 美元的电脑，拥有 1000+ 免费应用，能完成基本操作，开源</span>
+         </div>
+     </ul>
+</section>
+</div>
+</div>
+
 {% for news in news_timeline %}
 <a href = "{{ news["news_link"] }}">{{ news["news_name"] }}</a>
 {% end %}
 {% module Paginator(page, page_size, results_count) %}
+
+<footer class="footer">
+  <div class="subscribe-email row text-center">
+    <h3>您也可以通过电子邮件订阅每周的更新，不错过任何一个好产品</h3>
+    <p>我们不会公开您的邮箱，您可以随时取消订阅</p>
+    <form accept-charset="UTF-8" action="http://next.36kr.com/subscriptions" class="simple_form form-email" id="mc-embedded-subscribe-form" method="post"><div style="display:none"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="U6ePLbudLFAgxMjWv0+1wSIGl87teyvDNkD9XKmCaE0="></div>
+      <input class="input-email" id="subscription_email" name="subscription[email]" placeholder="输入您的邮箱" required="required" type="email">
+      <input class="input-subscribe btn" name="commit" type="submit" value="订阅">
+</form>  </div>
+  <div class="row cf">
+    <div class="copyright">
+      <p>© 2014-2015 <strong>NEXT</strong>. All Rights Reserved. A <a href="http://www.36kr.com/">36Kr</a> product.</p>
+      <p class="">上 NEXT，每天刷新更酷的生活方式。查看 <a href="http://next.36kr.com/about">FAQ</a> / <a href="http://next.36kr.com/feedback">反馈建议</a></p>
+    </div>
+
+    <div class="footer-follow">
+      <ul class="cf">
+        <li><a class="icons-weibo" href="http://weibo.com/36krnext" title="Weibo" target="_blank">Weibo</a></li>
+        <li><a class="icons-twitter" href="https://twitter.com/36krNEXT" title="Twitter" target="_blank">Twitter</a></li>
+        <li><a class="icons-blog" href="http://zhuanlan.zhihu.com/NEXTBlog" title="博客" target="_blank">博客</a></li>
+        <li><a class="icons-rss" href="http://next.36kr.com/feed" title="RSS 订阅" target="_blank">RSS Feed</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="Intercom" class="hide"></div>
+  <script data-turbolinks-track="true" src="./NEXT   不错过任何一个新产品_files/faye.js"></script>
+</footer>
 
 </body>
 </html>
